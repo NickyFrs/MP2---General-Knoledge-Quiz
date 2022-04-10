@@ -25,20 +25,39 @@
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/feb68d516c.js" crossorigin="anonymous"></script>
-
-
-    <title>General Knowledge Quiz</title>
-
+    <title>Let's Play</title>
 </head>
 <body>
-<section id="main-section">
-    <h2 class="into-title">intro Title</h2>
-    <p class="intro-p">aqui pon un parrafo describiendo el juego o algo</p>
-    <button type="button" class="btn btn-success" id="start-game">Start</button>
+
+<section id="questions-section" class="flex-column flex-center">
+    <div class="container-questions">
+        <div class="box" id="box">
+            <h2 class="question" id="question">Question</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" value="q1" class="answer">
+                    <label for="a" id="a_text">Question A</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="b" value="q2" class="answer">
+                    <label for="b" id="b_text">Question A</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="answer" id="c" value="q3" class="answer">
+                    <label for="c" id="c_text">Question A</label>
+                </li>
+
+                <li><input type="radio" name="answer" id="d" value="q4" class="answer">
+                    <label for="d" id="d_text">Question A</label>
+                </li>
+            </ul>
+
+            <button type="submit" class="btn btn-primary " id="submit">Next Question</button>
+        </div>
+    </div>
 </section>
-
-
-
 
 
 
@@ -50,5 +69,6 @@
 
 <!-- JQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+
 </body>
 </html>
