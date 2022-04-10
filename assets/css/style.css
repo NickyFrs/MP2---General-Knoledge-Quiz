@@ -12,7 +12,37 @@ body {
     margin: 0;
 }
 
+#main-section {
+    background-color: white;
+    border: 1px solid orange;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(245,177,8,0.2);
+    align-items: center;
+    margin: 4rem auto;
+    text-align: center;
+    width: 50vw;
+    height: 70vh;
+    padding: 20px;
+}
 
+.main-section {
+    padding-top: 4rem;
+}
+
+/*.feedback-form {*/
+/*    background-color: gold;*/
+/*    width: 50vw;*/
+/*    margin: 0 auto;*/
+/*    margin-top: -3rem;*/
+/*    padding: 5px;*/
+/*    text-align: center;*/
+/*}*/
+
+.input-group {
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: -3rem;
+}
 
 .hide {
     display: none;
