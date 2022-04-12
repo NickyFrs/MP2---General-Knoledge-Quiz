@@ -93,3 +93,40 @@ ul li:hover {
     display: block;
 }
 
+.correct {
+    background-color: darkgreen;
+}
+
+.incorrect {
+    background-color: darkred;
+}
+
+#progress-container {
+    display: block;
+}
+
+.progress-item {
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 10%;
+}
+
+.progress-container-prefix {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#progress-bar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid orange;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+#progress-bar-full {
+    height: 100%;
+    background: orange;
+    width: 0%;
+}
