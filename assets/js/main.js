@@ -56,6 +56,7 @@ const submitBtn = document.getElementById("submit");
 const progressBarFull = document.getElementById("progress-bar-full");
 
 let activeQuiz = 0;
+let nextQuestion = 0
 let score = 0;
 
 
@@ -77,7 +78,7 @@ function clearAnswerSelected() {
 };
 
 // Function to
-function selctedAnswer () {
+function selectedAnswer () {
     let selectedOption;
 
     answers.forEach(answer => {
@@ -89,9 +90,24 @@ function selctedAnswer () {
     return selectedOption;
 }
 
-
 // Event listening event for the click on the submit button to check the option selected
-submitBtn.addEventListener('click', () => {
-    const answer = selctedAnswer();
 
+submitBtn.addEventListener('click', () => {
+    const answer = selectedAnswer(); //this constant will call the funtion to get the selected quiz' option
+
+    // the conditional if statement below checks id the selected quiz's option is the correct answer
+    if(answer){
+        if(answer === questionsData[activeQuiz].correct){
+            score++
+        }
+
+        nextQuestion++
+        // evaluate if we are at the end of the quiz's questions
+        if (nextQuestion < questionsData.length) {
+            startQuiz();
+        } else {
+            questionsContainer.innerHTML = `<h2>done ___ correct</h2>`
+
+        }
+    }
 })
