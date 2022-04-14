@@ -55,15 +55,16 @@ const submitBtn = document.getElementById("submit");
 
 const progressBarFull = document.getElementById("progress-bar-full");
 
-let activeQuiz = 0;
+// let activeQuiz = 0;
 let nextQuestion = 0
 let score = 0;
 
+startQuiz();
 
 function startQuiz() {
     clearAnswerSelected();
 
-    const questionArray = questionsData[activeQuiz];
+    const questionArray = questionsData[nextQuestion];
 
     question.innerText = questionArray.question;
     optionA.innerText = questionArray.a;
@@ -90,14 +91,20 @@ function selectedAnswer () {
     return selectedOption;
 }
 
+
 // Event listening event for the click on the submit button to check the option selected
 
 submitBtn.addEventListener('click', () => {
     const answer = selectedAnswer(); //this constant will call the funtion to get the selected quiz' option
 
-    // the conditional if statement below checks id the selected quiz's option is the correct answer
+    // the conditional if statement below checks if any option has been selected
+    if (!answer){
+        alert('Please choose an option!')
+    }
+
+    // the conditional if statement below checks if the id of the selected quiz's option is the correct answer
     if(answer){
-        if(answer === questionsData[activeQuiz].correct){
+        if(answer === questionsData[nextQuestion].correct){
             score++
         }
 
