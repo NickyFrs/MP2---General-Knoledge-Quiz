@@ -11,7 +11,7 @@ const questionsData = [
         b: "respuesta b",
         c:" respuesta c",
         d: "respuesta d",
-        correct: "respuesta correcta"
+        correct: "a"
     },
 
     {
@@ -20,7 +20,7 @@ const questionsData = [
         b: "respuesta b",
         c: "respuesta c",
         d: "respuesta d",
-        correct: "respuesta correcta"
+        correct: "b"
     },
 
     {
@@ -29,7 +29,7 @@ const questionsData = [
         b: "respuesta b",
         c: "respuesta c",
         d: "respuesta d",
-        correct: "respuesta correcta"
+        correct: "c"
     },
 
     {
@@ -38,7 +38,7 @@ const questionsData = [
         b: "respuesta b",
         c: "respuesta c",
         d: "respuesta d",
-        correct: "respuesta correcta"
+        correct: "d"
     }
 ]
 
@@ -55,14 +55,15 @@ const submitBtn = document.getElementById("submit");
 
 const progressBarFull = document.getElementById("progress-bar-full");
 
-// let activeQuiz = 0;
+
 let nextQuestion = 0
 let score = 0;
 
+// Call the function to start the quiz
 startQuiz();
 
 function startQuiz() {
-    clearAnswerSelected();
+    clearAnswerSelected(); //call the function to clear answers selected before the next question set
 
     const questionArray = questionsData[nextQuestion];
 
@@ -78,7 +79,8 @@ function clearAnswerSelected() {
     answers.forEach(answer => answer.checked = false)
 };
 
-// Function to
+// Function to loop thru all the options and check if an option has been selected and if so
+// then return the ID of the selected option.
 function selectedAnswer () {
     let selectedOption;
 
@@ -91,11 +93,10 @@ function selectedAnswer () {
     return selectedOption;
 }
 
-
 // Event listening event for the click on the submit button to check the option selected
 
 submitBtn.addEventListener('click', () => {
-    const answer = selectedAnswer(); //this constant will call the funtion to get the selected quiz' option
+    const answer = selectedAnswer(); //this constant will call the function to get the selected quiz's option
 
     // the conditional if statement below checks if any option has been selected
     if (!answer){
@@ -109,11 +110,15 @@ submitBtn.addEventListener('click', () => {
         }
 
         nextQuestion++
-        // evaluate if we are at the end of the quiz's questions
+        // conditional to evaluate if we are at the end of the quiz's questions
         if (nextQuestion < questionsData.length) {
             startQuiz();
         } else {
-            questionsContainer.innerHTML = `<h2>done ___ correct</h2>`
+            questionsContainer.innerHTML = `
+                <h2>done ___${score} of ${questionsData.length} correct</h2>
+                
+                <button class="btn btn-primary btn-next-question" onclick="location.reload()">Reload quiz</button>
+                `
 
         }
     }
