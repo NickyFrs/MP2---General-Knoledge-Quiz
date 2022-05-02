@@ -125,13 +125,15 @@ submitBtn.addEventListener("click", () => {
         if (nextQuestion < questionsData.length) {
             startQuiz();
         } else {
-            questionsContainer.innerHTML = `
-                <h2>done ___${score} of ${questionsData.length} correct</h2>
-                
-                <button class="btn btn-primary btn-next-question" onclick="location.reload()">Reload quiz</button>
-                
-                <button class="btn btn-primary btn-next-question" onclick="apiTestReq()">api log</button>
-                `
+
+            // questionsContainer.innerHTML = `
+            //     <h2>done ___${score} of ${questionsData.length} correct</h2>
+            //
+            //     <button class="btn btn-primary btn-next-question" onclick="location.reload()">Play again</button>
+            //
+            //     <button class="btn btn-primary btn-next-question" onclick="\">Go Home</button>
+            //     `
+                return window.location.assign("/results.html")
         }
 
     }
