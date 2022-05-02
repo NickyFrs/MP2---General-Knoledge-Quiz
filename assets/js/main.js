@@ -6,86 +6,86 @@
 
 const questionsData = [
     {
-        question: "Which of the following Pacific Islander countries is ruled by a constitutional monarchy?",
         a: "Kiribati",
         b: "Palau",
         c:"Fiji",
+        correct: "d",
         d: "Tonga",
-        correct: "d"
+        question: "Which of the following Pacific Islander countries is ruled by a constitutional monarchy?"
     },
     {
-        "question": "What is the airspeed velocity of an unladen swallow?",
         a: "24 MPH",
         b: "15 MPH",
         c:"20 MPH",
+        correct: "a",
         d: "200 MPH",
-        correct: "a"
+        question: "What is the airspeed velocity of an unladen swallow?"
     },
     {
-        question: "On a dartboard, what number is directly opposite No. 1?",
         a: "20",
         b: "12",
         c:"19",
+        correct: "c",
         d: "15",
-        correct: "c"
+        question: "On a dartboard, what number is directly opposite No. 1?"
     },
     {
-        question: "Who is a co-founder of music streaming service Spotify?",
         a: "Daniel Ek",
         b: "Felix Miller",
         c:"Michael Breidenbruecker",
+        correct: "a",
         d: "Sean Parker",
-        correct: "a"
+        question: "Who is a co-founder of music streaming service Spotify?"
     },
     {
-        question: "Which of the following is an existing family in The Sims?",
         a: "The Simoleon Family",
         b: "The Family",
         c:"The Proud Family",
+        correct: "d",
         d: "The Goth Family",
-        correct: "d"
+        question: "Which of the following is an existing family in The Sims?"
     },
     {
-        question: "Which of the following buildings is example of a structure primarily built in the Art Deco architectural style?",
         a: "Taipei 101",
         b: "Niagara Mohawk Building",
         c:"One Detroit Center",
+        correct: "b",
         d: "Westendstrasse 1",
-        correct: "b"
+        question: "Which of the following buildings is example of a structure primarily built in the Art Deco architectural style?",
     },
     {
-        question: "Who is depicted on the US hundred dollar bill?",
         a: "George Washington",
         b: "Thomas Jefferson",
         c:"Benjamin Franklin",
+        correct: "c",
         d: "Abraham Lincoln",
-        correct: "c"
+        question: "Who is depicted on the US hundred dollar bill?"
     },
     {
-        question: "What is a Burgee?",
         a: "A rope",
         b: "A window",
         c:"A type of food",
+        correct: "d",
         d: "A flag",
-        correct: "d"
+        question: "What is a Burgee?",
     },
     {
-        question: "What is the star sign of someone born on Valentines day?",
         a: "Aquarius",
         b: "Pisces",
         c:"Capricorn",
+        correct: "a",
         d: "Scorpio",
-        correct: "a"
+        question: "What is the star sign of someone born on Valentines day?"
     },
     {
-        question: "Which of these cities does NOT have a United States Minting location?",
         a: "San Fransisco, CA",
         b: "Philidelphia, PA",
         c:"St. Louis, MO",
+        correct: "c",
         d: "West Point, NY",
-        correct: "c"
-    },
-]
+        question: "Which of these cities does NOT have a United States Minting location?"
+    }
+];
 
 // All constant variables to manipulate the DOM
 
@@ -108,7 +108,7 @@ const progressBarFull = document.getElementById("progress-bar-full");
 
 console.log(selectedAnswer.length / maxQuestionsNumber * 100);
 
-let nextQuestion = 0
+let nextQuestion = 0;
 let scorePoints = 10;
 let score = 0;
 
@@ -116,7 +116,9 @@ let score = 0;
 startQuiz();
 
 function startQuiz() {
-    clearAnswerSelected(); //call the function to clear answers selected before the next question set
+//call the function to clear answers
+// selected before the next question set
+    clearAnswerSelected();
 
     const questionArray = questionsData[nextQuestion];
 
@@ -127,48 +129,57 @@ function startQuiz() {
     optionD.innerText = questionArray.d;
 }
 
-// Function to clear the selected answer once the next quiz's question is presented
+// Function to clear the selected answer once
+// the next quiz's question is presented
 function clearAnswerSelected() {
-    answers.forEach(answer => answer.checked = false)
-}
+    answers.forEach(answer => answer.checked = false);
+};
 
-// Function to loop thru all the options and check if an option has been selected and if so
+// Function to loop thru all the options and
+// check if an option has been selected and if so
 // then return the ID of the selected option.
 function selectedAnswer () {
     let selectedOption;
 
     answers.forEach(answer => {
         if (answer.checked) {
-            selectedOption = answer.id
+            selectedOption = answer.id;
         }
-    })
+    });
 
     return selectedOption;
 }
 
 
-// Event listening event for the click on the submit button to check the option selected
+// Event listening event for the click on
+// the submit button to check the option selected
 
 submitBtn.addEventListener("click", () => {
-    const answer = selectedAnswer(); //this constant will call the function to get the selected quiz's option
+//this constant will call the function
+// to get the selected quiz's option
+    const answer = selectedAnswer();
 
-    // the conditional if statement below checks if any option has been selected
+    // the conditional if statement below
+    // checks if any option has been selected
     if (!answer){
-        alert('Please choose an option!')
+        alert("Please choose an option!");
     }
 
-    // the conditional if statement below checks if the id of the selected quiz's option is the correct answer
+    // the conditional if statement below checks
+    // if the id of the selected quiz's option
+    // is the correct answer
     if(answer){
 
         if(answer === questionsData[nextQuestion].correct){
-            score++
-            scoreTrackerCounter.innerText = score //+= 10-1;
+            score++;
+            scoreTrackerCounter.innerText = score; //+= 10-1;
         }
 
-        nextQuestion++
+        nextQuestion++;
         questionsTrackerCounter.innerText = `${nextQuestion}/${maxQuestionsNumber}`;
 
-        // conditional to evaluate if we are at the end of the quiz's questions
+        // conditional to evaluate if we are
+        // at the end of the quiz's questions
         if (nextQuestion < questionsData.length) {
             startQuiz();
         } else {
@@ -177,15 +188,12 @@ submitBtn.addEventListener("click", () => {
                 <div class="result-quiz">
                   <h2>${score} correct questions of ${questionsData.length} </h2>
                 </div>
-    
                 <div class="results-message">
                   <h2>All done!</h2>
                   <p>You finished the quiz.</p>
                   <p>You have answer ${score} questions correct out of ${questionsData.length}</p>
                   <p>Now you can either try again or go back to the start page.</p>
                 </div>
-    
-    
                 <div class="result-btns">
                   <button type="button" class="btn btn-primary btn-next-question" id="play-again" onclick="playAgain">
                       <a href="quiz.html">Play again</a>
@@ -194,8 +202,7 @@ submitBtn.addEventListener("click", () => {
                       <a href="index.html">Go Home</a>
                   </button>
                 </div>
-                `
-
+                `;
         }
 
     }
@@ -203,10 +210,11 @@ submitBtn.addEventListener("click", () => {
 })
 
 quitGame.addEventListener("click", () => {
-        alert("You have QUIT de game. Back to the beginning!!")
+        alert("You have QUIT de game. Back to the beginning!!");
     });
 
-//Functionm to fetch data from an API
+
+
 
 // function apiTestReq() {
 //     fetch("https://opentdb.com/api.php?amount=10")
@@ -216,5 +224,5 @@ quitGame.addEventListener("click", () => {
 //         .then(loadedQuestions =>{
 //             console.log(loadedQuestions.results)
 //         })
-
-}
+//
+// }
