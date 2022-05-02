@@ -1,6 +1,7 @@
 
 // // JQuery code
-// $(document).ready(function(){/*Code goes here*/});
+// $(document).ready(function(){
+// /*Code goes here*/});
 
 // Array of question for the quiz. Te quiz data = Q&A
 
@@ -212,8 +213,6 @@ submitBtn.addEventListener("click", () => {
 quitGame.addEventListener("click", () => {
         alert("You have QUIT de game. Back to the beginning!!");
     });
-
-
 
 
 // function apiTestReq() {
