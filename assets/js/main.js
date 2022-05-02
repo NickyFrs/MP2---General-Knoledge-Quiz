@@ -115,14 +115,11 @@ submitBtn.addEventListener("click", () => {
 
         if(answer === questionsData[nextQuestion].correct){
             score++
-            scoreTrackerCounter.innerText = score += 10-1;
+            scoreTrackerCounter.innerText = score //+= 10-1;
         }
 
         nextQuestion++
         questionsTrackerCounter.innerText = `${nextQuestion}/${maxQuestionsNumber}`;
-
-
-
 
         // conditional to evaluate if we are at the end of the quiz's questions
         if (nextQuestion < questionsData.length) {
@@ -140,13 +137,6 @@ submitBtn.addEventListener("click", () => {
     }
 
 })
-
-
-
-incrementScore = num => {
-    score =+ num;
-    scoreTrackerCounter.innerText = score;
-}
 
 
 function apiTestReq() {
