@@ -44,9 +44,20 @@ body {
     margin-top: -3rem;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: orange;
+}
+
 .hide {
     display: none;
 }
+
+
 
 
 
@@ -101,6 +112,28 @@ ul li:hover {
     background-color: darkred;
 }
 
+
+
+
+/* Question Tracker and Score Styling */
+
+#questionsCounter{
+    text-align: center;
+}
+
+.question-text{
+    padding-top: 0;
+}
+
+.score-text{
+    padding-top: 0;
+}
+
+.tracker-box {
+    display: flex;
+    justify-content: space-around;
+}
+
 #progress-container {
     display: block;
 }
@@ -118,11 +151,12 @@ ul li:hover {
 
 #progress-bar {
     width: 20rem;
-    height: 3rem;
+    height: 2rem;
     border: 0.2rem solid orange;
-    border-radius: 50px;
+    border-radius: 5px;
     overflow: hidden;
-    margin-left: 1rem;
+    display: inline-flex;
+    justify-content: space-between;
 }
 
 #progress-bar-full {
@@ -130,3 +164,4 @@ ul li:hover {
     background: orange;
     width: 0%;
 }
+

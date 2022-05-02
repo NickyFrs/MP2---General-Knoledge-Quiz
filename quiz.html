@@ -31,6 +31,27 @@
 
 <section id="questions-section" class="flex-column flex-center">
     <div class="container-questions" id="questions-container">
+
+        <!-- Question Counter -->
+        <div id="trackerBox" class="tracker-box">
+            <div id="questionsCounter">
+                <h4 class="question-title">Question</h4>
+                <h2 class="question-text" id="question-text"></h2>
+            </div>
+
+            <!-- Correct Answers Counter -->
+            <div id="scoreCounter">
+                <h4 class="score-title">Correct</h4>
+                <h2 class="score-text" id="score-text">0</h2>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div id="progress-bar">
+            <div id="progress-bar-full"></div>
+        </div>
+        <!-- End of Progress Bar -->
+
         <div class="box" id="box">
             <h2 id="question">Question</h2>
             <ul>
@@ -57,18 +78,6 @@
             <button type="submit" class="btn btn-primary btn-next-question" id="submit">Next Question</button>
         </div>
 
-        <!--    Progress Bar    -->
-        <div id="progress-container">
-            <div class="progress-item">
-                <p id="progress-text" class="progress-container-prefix">
-                    Progress
-                </p>
-                <div id="progress-bar">
-                    <div id="progress-bar-full"></div>
-                </div>
-            </div>
-        </div>
-        <!--    End of Progress Bar    -->
 
     </div>
 </section>

@@ -53,10 +53,16 @@ const optionC = document.getElementById("option-c");
 const optionD = document.getElementById("option-d");
 const submitBtn = document.getElementById("submit");
 
+const questionsTrackerCounter = document.getElementById("question-text");
+const scoreTrackerCounter = document.getElementById("score-text");
+const maxQuestionsNumber = questionsData.length;
+const progressBar = document.getElementById("progress-bar");
 const progressBarFull = document.getElementById("progress-bar-full");
 
+console.log(selectedAnswer.length / maxQuestionsNumber * 100);
 
 let nextQuestion = 0
+let scorePoints = 10;
 let score = 0;
 
 // Call the function to start the quiz
@@ -93,9 +99,10 @@ function selectedAnswer () {
     return selectedOption;
 }
 
+
 // Event listening event for the click on the submit button to check the option selected
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener("click", () => {
     const answer = selectedAnswer(); //this constant will call the function to get the selected quiz's option
 
     // the conditional if statement below checks if any option has been selected
@@ -105,11 +112,18 @@ submitBtn.addEventListener('click', () => {
 
     // the conditional if statement below checks if the id of the selected quiz's option is the correct answer
     if(answer){
+
         if(answer === questionsData[nextQuestion].correct){
             score++
+            scoreTrackerCounter.innerText = score += 10-1;
         }
 
         nextQuestion++
+        questionsTrackerCounter.innerText = `${nextQuestion}/${maxQuestionsNumber}`;
+
+
+
+
         // conditional to evaluate if we are at the end of the quiz's questions
         if (nextQuestion < questionsData.length) {
             startQuiz();
@@ -118,8 +132,30 @@ submitBtn.addEventListener('click', () => {
                 <h2>done ___${score} of ${questionsData.length} correct</h2>
                 
                 <button class="btn btn-primary btn-next-question" onclick="location.reload()">Reload quiz</button>
+                
+                <button class="btn btn-primary btn-next-question" onclick="apiTestReq()">api log</button>
                 `
-
         }
+
     }
+
 })
+
+
+
+incrementScore = num => {
+    score =+ num;
+    scoreTrackerCounter.innerText = score;
+}
+
+
+function apiTestReq() {
+    fetch("https://opentdb.com/api.php?amount=10")
+        .then(res => {
+            return res.json();
+        })
+        .then(loadedQuestions =>{
+            console.log(loadedQuestions.results)
+        })
+
+}
