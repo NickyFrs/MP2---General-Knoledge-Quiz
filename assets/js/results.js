@@ -18,13 +18,6 @@ const progressBarFull = document.getElementById("progress-bar-full");
 
 
 
-const playAgain = window.location.assign("/quiz.html")
-
-
-
-const goHome = window.location.assign("/index.html")
-
-
 questionsContainer.innerHTML = `
 <h2>done ___${score} of ${questionsData.length} correct</h2>
 <button class="btn btn-primary btn-next-question" onclick="location.reload()">Play again</button>

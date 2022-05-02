@@ -52,6 +52,8 @@ const optionB = document.getElementById("option-b");
 const optionC = document.getElementById("option-c");
 const optionD = document.getElementById("option-d");
 const submitBtn = document.getElementById("submit");
+const quitGame = document.getElementById("go-home");
+
 
 const questionsTrackerCounter = document.getElementById("question-text");
 const scoreTrackerCounter = document.getElementById("score-text");
@@ -126,19 +128,40 @@ submitBtn.addEventListener("click", () => {
             startQuiz();
         } else {
 
-            // questionsContainer.innerHTML = `
-            //     <h2>done ___${score} of ${questionsData.length} correct</h2>
-            //
-            //     <button class="btn btn-primary btn-next-question" onclick="location.reload()">Play again</button>
-            //
-            //     <button class="btn btn-primary btn-next-question" onclick="\">Go Home</button>
-            //     `
-                return window.location.assign("/results.html")
+            questionsContainer.innerHTML = `
+                <div class="result-quiz">
+                  <h2>${score} correct questions of ${questionsData.length} </h2>
+                </div>
+    
+                <div class="results-message">
+                  <h2>All done!</h2>
+                  <p>You finished the quiz.</p>
+                  <p>You have answer ${score} questions correct out of ${questionsData.length}</p>
+                  <p>Now you can either try again or go back to the start page.</p>
+                </div>
+    
+    
+                <div class="result-btns">
+                  <button type="button" class="btn btn-primary btn-next-question" id="play-again" onclick="playAgain">
+                      <a href="quiz.html">Play again</a>
+                  </button>
+                  <button type="button" class="btn btn-primary btn-next-question" id="go-home" onclick="goHome">
+                      <a href="index.html">Go Home</a>
+                  </button>
+                </div>
+                `
+
         }
 
     }
 
 })
+
+quitGame.addEventListener("click", () => {
+        alert("You have QUIT de game. Back to the beginning!!")
+    });
+
+
 
 
 function apiTestReq() {

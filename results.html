@@ -42,16 +42,25 @@
     <div class="container-questions" id="questions-container">
 
         <div class="result-quiz">
-            <h2>done ___${score} of ${questionsData.length} correct</h2>
-            <button class="btn btn-primary btn-next-question" onclick="location.reload()">Play again</button>
-            <button class="btn btn-primary btn-next-question" onclick="">Go Home</button>
+            <h2>${score} correct questions of ${questionsData.length} </h2>
         </div>
+
+        <div class="results-message">
+            <h2>Congratulations!</h2>
+            <p>You finished the quiz.</p>
+            <p>You have answer ${score} questions correct out of ${questionsData.length}</p>
+            <p>Now you can either try again or go back to the start page.</p>
+        </div>
+
 
         <div class="result-btns">
-            <button type="button" class="btn btn-primary btn-next-question" id="play-again" onclick="playAgain">Play again</button>
-            <button type="button" class="btn btn-primary btn-next-question" id="go-home" onclick="goHome">Go Home</button>
+            <button type="button" class="btn btn-primary btn-next-question" id="play-again" onclick="playAgain">
+                <a href="quiz.html">Play again</a>
+            </button>
+            <button type="button" class="btn btn-primary btn-next-question" id="go-home" onclick="goHome">
+                <a href="index.html">Go Home</a>
+            </button>
         </div>
-
     </div>
 
 </section>
