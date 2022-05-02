@@ -1,0 +1,85 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "question": "What type of dog is &#039;Handsome Dan&#039;, the mascot of Yale University?",
+      "a": "Yorkshire Terrier",
+      "b": "Boxer",
+      "c":"Pug",
+      "d": "Bulldog",
+      "correct": "d"
+    },
+    {
+      "question": "What is the airspeed velocity of an unladen swallow?",
+      "a": "24 MPH",
+      "b": "15 MPH",
+      "c":"20 MPH",
+      "d": "200 MPH",
+      "correct": "a"
+    },
+    {
+      "question": "On a dartboard, what number is directly opposite No. 1?",
+      "a": "20",
+      "b": "12",
+      "c":"19",
+      "d": "15",
+      "correct": "c"
+    },
+    {
+      "question": "Who is a co-founder of music streaming service Spotify?",
+      "a": "Daniel Ek",
+      "b": "Felix Miller",
+      "c":"Michael Breidenbruecker",
+      "d": "Sean Parker",
+      "correct": "a"
+    },
+    {
+      "question": "Which of the following is an existing family in &quot;The Sims&quot;?",
+      "a": "The Simoleon Family",
+      "b": "The Family",
+      "c":"The Proud Family",
+      "d": "The Goth Family",
+      "correct": "d"
+    },
+    {
+      "question": "Which of the following buildings is example of a structure primarily built in the Art Deco architectural style?",
+      "a": "Taipei 101",
+      "b": "Niagara Mohawk Building",
+      "c":"One Detroit Center",
+      "d": "Westendstrasse 1",
+      "correct": "b"
+    },
+    {
+      "question": "Who is depicted on the US hundred dollar bill?",
+      "a": "George Washington",
+      "b": "Thomas Jefferson",
+      "c":"Benjamin Franklin",
+      "d": "Abraham Lincoln",
+      "correct": "c"
+    },
+    {
+      "question": "What is a Burgee?",
+      "a": "A rope",
+      "b": "A window",
+      "c":"A type of food",
+      "d": "A flag",
+      "correct": "d"
+    },
+    {
+      "question": "What is the star sign of someone born on Valentines day?",
+      "a": "Aquarius",
+      "b": "Pisces",
+      "c":"Capricorn",
+      "d": "Scorpio",
+      "correct": "a"
+    },
+   {
+     "question": "Which of these cities does NOT have a United States Minting location?",
+      "a": "San Fransisco, CA",
+      "b": "Philidelphia, PA",
+      "c":"St. Louis, MO",
+      "d": "West Point, NY",
+      "correct": "c"
+    }
+  ]
+}

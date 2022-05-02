@@ -6,40 +6,85 @@
 
 const questionsData = [
     {
-        question: "Pregunta A",
-        a: "respuesta a",
-        b: "respuesta b",
-        c:" respuesta c",
-        d: "respuesta d",
+        question: "Which of the following Pacific Islander countries is ruled by a constitutional monarchy?",
+        a: "Kiribati",
+        b: "Palau",
+        c:"Fiji",
+        d: "Tonga",
+        correct: "d"
+    },
+    {
+        "question": "What is the airspeed velocity of an unladen swallow?",
+        a: "24 MPH",
+        b: "15 MPH",
+        c:"20 MPH",
+        d: "200 MPH",
         correct: "a"
     },
-
     {
-        question: "Pregunta B",
-        a: "respuesta a",
-        b: "respuesta b",
-        c: "respuesta c",
-        d: "respuesta d",
-        correct: "b"
-    },
-
-    {
-        question: "Pregunta C",
-        a: "respuesta a",
-        b: "respuesta b",
-        c: "respuesta c",
-        d: "respuesta d",
+        question: "On a dartboard, what number is directly opposite No. 1?",
+        a: "20",
+        b: "12",
+        c:"19",
+        d: "15",
         correct: "c"
     },
-
     {
-        question: "Pregunta D",
-        a: "respuesta a",
-        b: "respuesta b",
-        c: "respuesta c",
-        d: "respuesta d",
+        question: "Who is a co-founder of music streaming service Spotify?",
+        a: "Daniel Ek",
+        b: "Felix Miller",
+        c:"Michael Breidenbruecker",
+        d: "Sean Parker",
+        correct: "a"
+    },
+    {
+        question: "Which of the following is an existing family in The Sims?",
+        a: "The Simoleon Family",
+        b: "The Family",
+        c:"The Proud Family",
+        d: "The Goth Family",
         correct: "d"
-    }
+    },
+    {
+        question: "Which of the following buildings is example of a structure primarily built in the Art Deco architectural style?",
+        a: "Taipei 101",
+        b: "Niagara Mohawk Building",
+        c:"One Detroit Center",
+        d: "Westendstrasse 1",
+        correct: "b"
+    },
+    {
+        question: "Who is depicted on the US hundred dollar bill?",
+        a: "George Washington",
+        b: "Thomas Jefferson",
+        c:"Benjamin Franklin",
+        d: "Abraham Lincoln",
+        correct: "c"
+    },
+    {
+        question: "What is a Burgee?",
+        a: "A rope",
+        b: "A window",
+        c:"A type of food",
+        d: "A flag",
+        correct: "d"
+    },
+    {
+        question: "What is the star sign of someone born on Valentines day?",
+        a: "Aquarius",
+        b: "Pisces",
+        c:"Capricorn",
+        d: "Scorpio",
+        correct: "a"
+    },
+    {
+        question: "Which of these cities does NOT have a United States Minting location?",
+        a: "San Fransisco, CA",
+        b: "Philidelphia, PA",
+        c:"St. Louis, MO",
+        d: "West Point, NY",
+        correct: "c"
+    },
 ]
 
 // All constant variables to manipulate the DOM
@@ -85,7 +130,7 @@ function startQuiz() {
 // Function to clear the selected answer once the next quiz's question is presented
 function clearAnswerSelected() {
     answers.forEach(answer => answer.checked = false)
-};
+}
 
 // Function to loop thru all the options and check if an option has been selected and if so
 // then return the ID of the selected option.
@@ -161,16 +206,15 @@ quitGame.addEventListener("click", () => {
         alert("You have QUIT de game. Back to the beginning!!")
     });
 
+//Functionm to fetch data from an API
 
-
-
-function apiTestReq() {
-    fetch("https://opentdb.com/api.php?amount=10")
-        .then(res => {
-            return res.json();
-        })
-        .then(loadedQuestions =>{
-            console.log(loadedQuestions.results)
-        })
+// function apiTestReq() {
+//     fetch("https://opentdb.com/api.php?amount=10")
+//         .then(res => {
+//             return res.json();
+//         })
+//         .then(loadedQuestions =>{
+//             console.log(loadedQuestions.results)
+//         })
 
 }
