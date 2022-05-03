@@ -4,13 +4,13 @@
     background-color: white;
     border: 1px solid orange;
     border-radius: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(245,177,8,0.2);
+    box-shadow: 0 8px 16px 0 rgba(245,177,8,0.2);
     align-items: center;
     margin: 4rem auto;
     width: 50vw;
     height: 70vh;
     padding: 20px;
-]}
+}
 
 h2 {
     padding: 1rem;
@@ -25,8 +25,6 @@ ul li {
     font-size: 1.2rem;
     text-transform: uppercase;
     margin: 10px;
-    /*background-color: white;*/
-    /*box-shadow: 5px 9px 10px -6px darkorange;*/
 }
 
 ul li:hover {
@@ -50,16 +48,6 @@ li > label {
     width: 100%;
     display: block;
 }
-
-.correct {
-    background-color: darkgreen;
-}
-
-.incorrect {
-    background-color: darkred;
-}
-
-
 
 
 /* Question Tracker and Score Styling */
@@ -95,23 +83,6 @@ li > label {
     text-align: center;
     font-size: 1.2rem;
 }
-
-#progress-bar {
-    width: 20rem;
-    height: 2rem;
-    border: 0.2rem solid orange;
-    border-radius: 5px;
-    overflow: hidden;
-    display: inline-flex;
-    justify-content: space-between;
-}
-
-#progress-bar-full {
-    height: 100%;
-    background: orange;
-    width: 0%;
-}
-
 
 /* Result Page Styling */
 
