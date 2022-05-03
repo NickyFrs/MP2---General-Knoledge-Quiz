@@ -1,9 +1,5 @@
 
-// // JQuery code
-// $(document).ready(function(){
-// /*Code goes here*/});
-
-// Array of question for the quiz. Te quiz data = Q&A
+// Array of question for the quiz.
 
 const questionsData = [
     {
@@ -12,7 +8,8 @@ const questionsData = [
         c:"Fiji",
         correct: "d",
         d: "Tonga",
-        question: "Which of the following Pacific Islander countries is ruled by a constitutional monarchy?"
+        question: "Which of the following Pacific Islander " +
+            "countries is ruled by a constitutional monarchy?"
     },
     {
         a: "24 MPH",
@@ -20,7 +17,8 @@ const questionsData = [
         c:"20 MPH",
         correct: "a",
         d: "200 MPH",
-        question: "What is the airspeed velocity of an unladen swallow?"
+        question: "What is the airspeed velocity " +
+            "of an unladen swallow?"
     },
     {
         a: "20",
@@ -28,7 +26,8 @@ const questionsData = [
         c:"19",
         correct: "c",
         d: "15",
-        question: "On a dartboard, what number is directly opposite No. 1?"
+        question: "On a dartboard, what number " +
+            "is directly opposite No. 1?"
     },
     {
         a: "Daniel Ek",
@@ -36,7 +35,8 @@ const questionsData = [
         c:"Michael Breidenbruecker",
         correct: "a",
         d: "Sean Parker",
-        question: "Who is a co-founder of music streaming service Spotify?"
+        question: "Who is a co-founder of music " +
+            "streaming service Spotify?"
     },
     {
         a: "The Simoleon Family",
@@ -44,7 +44,8 @@ const questionsData = [
         c:"The Proud Family",
         correct: "d",
         d: "The Goth Family",
-        question: "Which of the following is an existing family in The Sims?"
+        question: "Which of the following is an " +
+            "existing family in The Sims?"
     },
     {
         a: "Taipei 101",
@@ -52,7 +53,9 @@ const questionsData = [
         c:"One Detroit Center",
         correct: "b",
         d: "Westendstrasse 1",
-        question: "Which of the following buildings is example of a structure primarily built in the Art Deco architectural style?",
+        question: "Which of the following buildings " +
+            "is example of a structure primarily " +
+            "built in the Art Deco architectural style?"
     },
     {
         a: "George Washington",
@@ -60,7 +63,8 @@ const questionsData = [
         c:"Benjamin Franklin",
         correct: "c",
         d: "Abraham Lincoln",
-        question: "Who is depicted on the US hundred dollar bill?"
+        question: "Who is depicted on the US " +
+            "hundred dollar bill?"
     },
     {
         a: "A rope",
@@ -68,7 +72,7 @@ const questionsData = [
         c:"A type of food",
         correct: "d",
         d: "A flag",
-        question: "What is a Burgee?",
+        question: "What is a Burgee?"
     },
     {
         a: "Aquarius",
@@ -76,7 +80,8 @@ const questionsData = [
         c:"Capricorn",
         correct: "a",
         d: "Scorpio",
-        question: "What is the star sign of someone born on Valentines day?"
+        question: "What is the star sign of " +
+            "someone born on Valentines day?"
     },
     {
         a: "San Fransisco, CA",
@@ -84,7 +89,8 @@ const questionsData = [
         c:"St. Louis, MO",
         correct: "c",
         d: "West Point, NY",
-        question: "Which of these cities does NOT have a United States Minting location?"
+        question: "Which of these cities does " +
+            "NOT have a United States Minting location?"
     }
 ];
 
@@ -106,8 +112,6 @@ const scoreTrackerCounter = document.getElementById("score-text");
 const maxQuestionsNumber = questionsData.length;
 const progressBar = document.getElementById("progress-bar");
 const progressBarFull = document.getElementById("progress-bar-full");
-
-console.log(selectedAnswer.length / maxQuestionsNumber * 100);
 
 let nextQuestion = 0;
 let scorePoints = 10;
@@ -134,7 +138,7 @@ function startQuiz() {
 // the next quiz's question is presented
 function clearAnswerSelected() {
     answers.forEach(answer => answer.checked = false);
-};
+}
 
 // Function to loop thru all the options and
 // check if an option has been selected and if so
@@ -150,7 +154,6 @@ function selectedAnswer () {
 
     return selectedOption;
 }
-
 
 // Event listening event for the click on
 // the submit button to check the option selected
@@ -181,47 +184,38 @@ submitBtn.addEventListener("click", () => {
 
         // conditional to evaluate if we are
         // at the end of the quiz's questions
+        // if we are it give the final number of
+        // correct questions.
         if (nextQuestion < questionsData.length) {
             startQuiz();
         } else {
 
             questionsContainer.innerHTML = `
-                <div class="result-quiz">
-                  <h2>${score} correct questions of ${questionsData.length} </h2>
-                </div>
-                <div class="results-message">
-                  <h2>All done!</h2>
-                  <p>You finished the quiz.</p>
-                  <p>You have answer ${score} questions correct out of ${questionsData.length}</p>
-                  <p>Now you can either try again or go back to the start page.</p>
-                </div>
-                <div class="result-btns">
-                  <button type="button" class="btn btn-primary btn-next-question" id="play-again" onclick="playAgain">
-                      <a href="quiz.html">Play again</a>
-                  </button>
-                  <button type="button" class="btn btn-primary btn-next-question" id="go-home" onclick="goHome">
-                      <a href="index.html">Go Home</a>
-                  </button>
+                <div class="result-page">
+                    <div class="result-quiz">
+                      <h2>${score} correct questions out of ${questionsData.length} </h2>
+                    </div>
+                    <div class="results-message">
+                      <h2>All done!</h2>
+                      <p>You finished the quiz.</p>
+                      <p>You have answer ${score} questions correct out of ${questionsData.length}</p>
+                      <p>Now you can either try again or go back to the start page.</p>
+                    </div>
+                    <div class="result-btns">
+                      <button type="button" class="btn btn-primary btn-next-question" id="play-again" onclick="playAgain">
+                          <a href="quiz.html">Try again</a>
+                      </button>
+                      <button type="button" class="btn btn-success btn-next-question" id="go-home" onclick="goHome">
+                          <a href="index.html">Go Home</a>
+                      </button>
+                    </div>
                 </div>
                 `;
         }
-
     }
-
 })
 
+//event listener for the go home button
 quitGame.addEventListener("click", () => {
         alert("You have QUIT de game. Back to the beginning!!");
     });
-
-
-// function apiTestReq() {
-//     fetch("https://opentdb.com/api.php?amount=10")
-//         .then(res => {
-//             return res.json();
-//         })
-//         .then(loadedQuestions =>{
-//             console.log(loadedQuestions.results)
-//         })
-//
-// }
