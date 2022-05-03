@@ -110,11 +110,8 @@ const quitGame = document.getElementById("go-home");
 const questionsTrackerCounter = document.getElementById("question-text");
 const scoreTrackerCounter = document.getElementById("score-text");
 const maxQuestionsNumber = questionsData.length;
-const progressBar = document.getElementById("progress-bar");
-const progressBarFull = document.getElementById("progress-bar-full");
 
 let nextQuestion = 0;
-let scorePoints = 10;
 let score = 0;
 
 // Call the function to start the quiz
@@ -137,7 +134,9 @@ function startQuiz() {
 // Function to clear the selected answer once
 // the next quiz's question is presented
 function clearAnswerSelected() {
-    answers.forEach(answer => answer.checked = false);
+    answers.forEach(function  (answer) {
+        answer.checked = false;
+    });
 }
 
 // Function to loop thru all the options and
@@ -146,7 +145,7 @@ function clearAnswerSelected() {
 function selectedAnswer () {
     let selectedOption;
 
-    answers.forEach(answer => {
+    answers.forEach( function  (answer) {
         if (answer.checked) {
             selectedOption = answer.id;
         }
@@ -158,7 +157,7 @@ function selectedAnswer () {
 // Event listening event for the click on
 // the submit button to check the option selected
 
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", function() {
 //this constant will call the function
 // to get the selected quiz's option
     const answer = selectedAnswer();
@@ -175,11 +174,11 @@ submitBtn.addEventListener("click", () => {
     if(answer){
 
         if(answer === questionsData[nextQuestion].correct){
-            score++;
-            scoreTrackerCounter.innerText = score; //+= 10-1;
+            score+=1;
+            scoreTrackerCounter.innerText = score;
         }
 
-        nextQuestion++;
+        nextQuestion+=1;
         questionsTrackerCounter.innerText = `${nextQuestion}/${maxQuestionsNumber}`;
 
         // conditional to evaluate if we are
@@ -213,9 +212,9 @@ submitBtn.addEventListener("click", () => {
                 `;
         }
     }
-})
+});
 
 //event listener for the go home button
-quitGame.addEventListener("click", () => {
+quitGame.addEventListener("click", function() {
         alert("You have QUIT de game. Back to the beginning!!");
     });
