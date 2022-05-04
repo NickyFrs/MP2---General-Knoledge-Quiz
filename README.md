@@ -14,8 +14,8 @@ Screenshots of the pages as it is, please see links below:
 - Project View,
    See pictures here:
 	- [Homepage](https://nickyfrs.github.io/Milestone-Project-2-General-Knoledge-Quiz/screenshots/index-page.jpg)
-	- [Quiz Page](https://nickyfrs.github.io/Milestone-Project-2-General-Knoledge-Quiz/screenshots/last-page.jpg)
-	- [Final Page](https://nickyfrs.github.io/Milestone-Project-2-General-Knoledge-Quiz/screenshots/quiz-page.jpg)
+	- [Quiz Page](https://nickyfrs.github.io/Milestone-Project-2-General-Knoledge-Quiz/screenshots/quiz-page.jpg)
+	- [Final Page](https://nickyfrs.github.io/Milestone-Project-2-General-Knoledge-Quiz/screenshots/last-page.jpg)
 	
 
 ## UX 
