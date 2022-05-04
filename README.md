@@ -93,11 +93,6 @@ Images are kept to a minimum just using 2:
 - The second one is used for the favicon. the image used was a photograph under the Creative Commons licenses taken from unsplash website.
   [link to the photo here](https://unsplash.com/photos/jvBXiynINGE).
 
-### Skeleton
-
-A .PDF file can be found [HERE](https://nickyfrs.github.io/hma-bds/Wireframes/HMA-BDS-Wireframe.pdf) with a wireframe meda with Figma shoing the mobile navigation 
-idea for desktop and mobile, as well as the footer wireframe for mobile and the entire idea for 
-the Homepage layout for the website
 
 ---
 ### User Journey
