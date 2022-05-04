@@ -121,7 +121,7 @@ Since this is a basic quiz application, there are many improvements planned for 
 ## Testing
 
  A number of testing was carried out once the website completed. A spreadsheet and PDFs files were created for all 
- the tests and can be found in the folder Test-Validation [https://github.com/NickyFrs/Milestone-Project-2-General-Knoledge-Quiz/Test-Validation](https://github.com/NickyFrs/Milestone-Project-2-General-Knoledge-Quiz/Test-Validation).
+ the tests and can be found in the folder Test-Validation [https://github.com/NickyFrs/Milestone-Project-2-General-Knoledge-Quiz/tree/main/Test-Validation](https://github.com/NickyFrs/Milestone-Project-2-General-Knoledge-Quiz/tree/main/Test-Validation).
  
 **Validations**
 
