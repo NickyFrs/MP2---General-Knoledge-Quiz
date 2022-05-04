@@ -137,11 +137,12 @@ The process was repeated until no warning remained.
 
 **Manual Testing**
 
-- Manual testing was carried out on all the links and buttons on every page - all links in the footers and the navbars.
-- The read more and submit buttons were all checked as well. 
-- The collapse feature on the About page works fine.
-- The website was inspected using Google Chrome Dev Tools to view it on mobile and tablet versions. Each page was viewed and tested in these views.
-- A small and quick peer review was carried out for look and responsiveness which came up with positive feedback.
+- Manual testing was carried out on all the buttons on every page.
+- The start buttons on the homepage was checked.
+- Transitions between pages working properly.
+- Questions working and presented one at the time.
+- options selectable.
+- Counters and End of quiz checked.
 
 ## Deployment of Website
 
@@ -164,3 +165,42 @@ Link to repositories:
 Link to Deployed Website:
 [Milestone-Project-2-General-Knoledge-Quiz](https://nickyfrs.github.io/Milestone-Project-2-General-Knoledge-Quiz/)
 
+---
+## Technology
+- GitHub was where the files were stored.
+- WebStorm IDE was the editing environment used to create and edit files.
+- [JSLint](https://www.jslint.com/) used for the JavaScript code validation.
+- [Esprima](https://esprima.org/) used as JavaScript Syntax Validator.
+- [Bootstrap 5](https://getbootstrap.com/) was used for Collapse menu on about page and progress bars shown in the core value section on the same page.
+- [Font awesome](https://fontawesome.com/) was used to provide icons for social media and in the contact page.
+- [Google Fonts](https://fonts.google.com/) was used to provide the fonts.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator) was used to validate the style.css file.
+- [HTML](https://www.w3schools.com)  **HTML5 reference** for creating the website and leveraged it's semantic elements.
+- [CSS3](https://www.w3schools.com/css/css_intro.asp) The project uses **CSS3** for styling elements of the page.
+- [JQuery](https://jquery.com) from boostrap **JQuery** to support bootstrap collapsible menu in the about.html page.
+- [Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/)
+- Express.adobe.com. 2022. Creative Cloud Express - Logo Maker. [online] Available at: <https://express.adobe.com/express-apps/logomaker/preview> [Accessed 3 May 2022]
+
+---
+## Credit
+
+- Hope Music Academy for letting me use their content and allowing me to present the idea.
+- The Code Institute tutorials.
+- Philip Morris for guidance and help on testing.
+
+- ##### Thanks for the visual guidance and help of YouTubers: 
+   
+     - James Q Quick, J., 2022. Build a Quiz App series. [online] Youtube.com. Available at: <https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx> [Accessed 3 May 2022].
+     - Design, B., 2022. How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial. [online] Youtube.com. Available at: <https://www.youtube.com/watch?v=f4fB9Xg2JEY> [Accessed 2 May 2022]
+---
+## Content and Media
+- Only the photo "Rubik’s Cube 3x3x3x5x5x5" was used for the creation of the favicon:
+
+  Unsplash.com. 2022. Photo by Olav Ahrens Røtne on Unsplash. [online] unsplash.com. Available at: <https://unsplash.com/photos/jvBXiynINGE> [Accessed 10 April 2022].
+  Published on October 15, 2018; last accessed 10-apr-2022@12:08
+  
+---
+#### Bugs and Fixes
+- Responsiveness for mobile devices needs to be review.
+- previous question button needs to be implemented.
+- alert should be changed to modal. 
