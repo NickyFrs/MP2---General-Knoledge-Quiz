@@ -1,3 +1,12 @@
+/* This document was created using the following tutorials on YouTube:
+
+https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx
+https://www.youtube.com/watch?v=f4fB9Xg2JEY
+
+I have borrowed code from this tutorial to assist with creating the quiz game.
+Please note some of the borrowed code has been customised by me to fit this project.
+I have also added my own code for additional functions for the project. */
+
 
 // Array of question for the quiz.
 
@@ -117,31 +126,32 @@ let score = 0;
 // Call the function to start the quiz
 startQuiz();
 
+
 function startQuiz() {
-//call the function to clear answers
-// selected before the next question set
-    clearAnswerSelected();
+    /* Call the function to clear answers
+    selected before the next question set */
+        clearAnswerSelected();
 
-    const questionArray = questionsData[nextQuestion];
+        const questionArray = questionsData[nextQuestion];
 
-    question.innerText = questionArray.question;
-    optionA.innerText = questionArray.a;
-    optionB.innerText = questionArray.b;
-    optionC.innerText = questionArray.c;
-    optionD.innerText = questionArray.d;
-}
+        question.innerText = questionArray.question;
+        optionA.innerText = questionArray.a;
+        optionB.innerText = questionArray.b;
+        optionC.innerText = questionArray.c;
+        optionD.innerText = questionArray.d;
+    }
 
-// Function to clear the selected answer once
-// the next quiz's question is presented
-function clearAnswerSelected() {
-    answers.forEach(function  (answer) {
-        answer.checked = false;
-    });
-}
+    /* Function to clear the selected answer once
+     the next quiz's question is presented */
+    function clearAnswerSelected() {
+        answers.forEach(function  (answer) {
+            answer.checked = false;
+        });
+    }
 
-// Function to loop thru all the options and
-// check if an option has been selected and if so
-// then return the ID of the selected option.
+    /* Function to loop thru all the options and
+     check if an option has been selected and if so
+     then return the ID of the selected option. */
 function selectedAnswer () {
     let selectedOption;
 
@@ -154,8 +164,8 @@ function selectedAnswer () {
     return selectedOption;
 }
 
-// Event listening event for the click on
-// the submit button to check the option selected
+/* Event listening event for the click on
+the submit button to check the option selected */
 
 submitBtn.addEventListener("click", function() {
 //this constant will call the function
@@ -168,9 +178,9 @@ submitBtn.addEventListener("click", function() {
         alert("Please choose an option!");
     }
 
-    // the conditional if statement below checks
-    // if the id of the selected quiz's option
-    // is the correct answer
+    /* the conditional if statement below checks
+     if the id of the selected quiz's option
+     is the correct answer. */
     if(answer){
 
         if(answer === questionsData[nextQuestion].correct){
@@ -181,10 +191,10 @@ submitBtn.addEventListener("click", function() {
         nextQuestion+=1;
         questionsTrackerCounter.innerText = `${nextQuestion}/${maxQuestionsNumber}`;
 
-        // conditional to evaluate if we are
-        // at the end of the quiz's questions
-        // if we are it give the final number of
-        // correct questions.
+        /* conditional to evaluate if we are
+         at the end of the quiz's questions
+         if we are it give the final number of
+         correct questions. */
         if (nextQuestion < questionsData.length) {
             startQuiz();
         } else {
